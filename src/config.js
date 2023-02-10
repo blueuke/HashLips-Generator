@@ -6,8 +6,8 @@ const network = NETWORK.eth;
 
 // General metadata for Ethereum
 const namePrefix = "";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const description = "The metaverse a place where judgment is forgotten. We eradicate monotony and create a world where all kind of different ideas are what propels our reality. A place for creators, innovators and disruptors. Introducing MPC a community focused NFT project, which aims to build an exciting and eccentric metaverse world. Let’s build a world, a better world :).";
+const baseUri = "ipfs://QmZZXjJQJkEaQ7qC1zxGWqXntfrRa9MUJ3vJ1xZYsBjcHZ";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -21,34 +21,49 @@ const solanaMetadata = {
   ],
 };
 
-// If you have selected Solana then the collection starts from 0 automatically
+//without back items
 const layerConfigurations = [
   {
-    growEditionSizeTo: 50,
+    growEditionSizeTo: 700,
     layersOrder: [
-      { name: "Background", options: {
+      { name: "background", options: {
           bypassDNA: true
         }
       },
-      { name: "Eyeball" },
-      { name: "Eye color", options: {
-        bypassDNA: true
-      } },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      {name:"shadow"},
+      {name: "base"},
+      {name: "body"},
+      {name: "hat"},
+      {name: "weapon"},     
+
+    ],
+  },
+  //with Back items
+    {
+    growEditionSizeTo: 1111,
+    layersOrder: [
+      { name: "background", options: {
+          bypassDNA: true
+        }
+      },
+      {name:"shadow"},
+      {name:"back"},
+      {name: "base"},
+      {name: "body"},
+      {name: "hat"},
+      {name: "weapon"},     
+
     ],
   },
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 560,
+  height: 720,
   smoothing: false,
 };
 
@@ -83,7 +98,11 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {};
+const extraMetadata = {
+  artist:"Tomas Dukoski",
+  techGuru:"kanef",
+  projectLeader:"Vladimir Dukoski",
+};
 
 const rarityDelimiter = "#";
 
